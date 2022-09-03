@@ -468,11 +468,11 @@ if menu_id== 'AML Tool':
     <style>
     div.stButton > button:first-child {
         background-color: #357af7;
-        color:#ffffff; width: 109em;
+        color:#ffffff; width: 110em;
     }
     div.stButton > button:hover {
         background-color: #5D95F9;
-        width: 109em;color:#fffff;
+        width: 110em;color:#fffff;
         }
     </style>""", unsafe_allow_html=True)
 
