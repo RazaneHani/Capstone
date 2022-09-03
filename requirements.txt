@@ -1,0 +1,11 @@
+hydralit_components==1.0.9
+joblib==1.1.0
+numpy==1.22.2
+pandas==1.4.0
+Pillow==9.2.0
+plotly==5.6.0
+requests==2.27.1
+scikit_learn==1.1.2
+streamlit==1.9.0
+streamlit_card==0.0.3
+streamlit_lottie==0.0.3
