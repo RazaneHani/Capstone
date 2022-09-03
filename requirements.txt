@@ -8,4 +8,3 @@ requests==2.27.1
 scikit_learn==1.1.2
 streamlit_card==0.0.3
 streamlit_lottie==0.0.3
-streamlit-option-menu==0.3.2
