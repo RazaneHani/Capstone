@@ -468,7 +468,7 @@ if menu_id== 'AML Tool':
     <style>
     div.stButton > button:first-child {
         background-color: #357af7;
-        color:#ffffff; width: 114em;
+        color:#ffffff; width: 113em;
     }
     div.stButton > button:hover {
         background-color: #5D95F9;
