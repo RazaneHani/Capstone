@@ -75,7 +75,7 @@ def img_to_bytes(img_path):
     return encoded
 
 header_html = "<img src='data:image/png;base64,{}' class='img-fluid'>".format(
-    img_to_bytes(r"C:\Users\Ncs\OneDrive\Desktop\CASTONE\faded.png")
+    img_to_bytes("faded.png")
 )
 st.markdown(
     header_html, unsafe_allow_html=True,
@@ -127,8 +127,8 @@ import functions
 from pickle import TRUE
 import pandas as pd
 import datetime
-df= pd.read_csv(r"C:\Users\Ncs\OneDrive\Desktop\CASTONE\ML1.csv")
-dff= pd.read_csv(r"C:\Users\Ncs\OneDrive\Desktop\CASTONE\ML.csv")
+df= pd.read_csv("ML1.csv")
+dff= pd.read_csv("ML.csv")
 df['Dates'] = pd.to_datetime(df['Date']).dt.date
 df.Dates = pd.to_datetime(df.Dates)
 df["Month"] = df.Dates.dt.month
@@ -316,10 +316,10 @@ if menu_id== 'Dashboard':
 ##########################################################################
 if menu_id== 'Connectivity and Purity':
 
-    connectivity_receiver= pd.read_csv(r"C:\Users\Ncs\OneDrive\Desktop\CASTONE\AVG Connectivity of Receiver ID.csv")
-    connectivity_sender= pd.read_csv(r"C:\Users\Ncs\OneDrive\Desktop\CASTONE\AVG Connectivity of Sender ID.csv")
-    purity_receiver= pd.read_csv(r"C:\Users\Ncs\OneDrive\Desktop\CASTONE\AVG Purity of Receiver ID.csv")
-    purity_sender= pd.read_csv(r"C:\Users\Ncs\OneDrive\Desktop\CASTONE\AVG Purity of Sender ID.csv")
+    connectivity_receiver= pd.read_csv("AVG Connectivity of Receiver ID.csv")
+    connectivity_sender= pd.read_csv("AVG Connectivity of Sender ID.csv")
+    purity_receiver= pd.read_csv("AVG Purity of Receiver ID.csv")
+    purity_sender= pd.read_csv("AVG Purity of Sender ID.csv")
 
     one = px.bar(connectivity_receiver, y="Avg Connectivity of Receiver ID",  x='Is Fraud', color_discrete_map={0: "#644BFF", 1: "#644BFF"})
     one.update_layout({
