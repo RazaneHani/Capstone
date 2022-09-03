@@ -393,14 +393,16 @@ if menu_id== 'AML Tool':
             a=st.write('Connectivity of this sender is: ', sender[sender['Sender ID']==z]['Connectivity of Sender ID'].values[0])
             b=st.write('Purity of this sender is: ', sender[sender['Sender ID']==z]['Purity of Sender ID'].values[0])
         else:
-            st.write('Connectivity and Purity of this sender is: 0')
+            st.write('Connectivity of this sender is: 0')
+            st.write('Purity of this sender is: 100')
     with c2:
         x= st.number_input('Receiver ID', 0, 9999999)
         if x in list(receiver['Receiver ID']):
             c=st.write('Connectivity of this receiver is: ', receiver[receiver['Receiver ID']==x]['Connectivity of Receiver ID'].values[0])
             d= st.write('Purity of this receiver is: ', receiver[receiver['Receiver ID']==x]['Purity of Receiver ID'].values[0])
         else:
-            st.write('Connectivity and Purity of this receiver is: 0')
+            st.write('Connectivity of this receiver is: 0')
+            st.write('Purity of this receiver is: 100')
 
     #Pipeline for numerical features preprocessing (imputing by mean, outliers removal using RobustScaler(), scaling and normalizing)
     numerical_transformer = Pipeline(steps=[                            
@@ -466,7 +468,7 @@ if menu_id== 'AML Tool':
     <style>
     div.stButton > button:first-child {
         background-color: #357af7;
-        color:#ffffff; width: 117em;
+        color:#ffffff; width: 101em;
     }
     div.stButton > button:hover {
         background-color: #5D95F9;
