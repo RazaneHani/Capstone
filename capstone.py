@@ -315,7 +315,8 @@ if menu_id== 'Dashboard':
 
 ##########################################################################
 if menu_id== 'Connectivity and Purity':
-
+    display_app_header(main_txt='Average Connectivity and Purity of Receivers and Senders Within a Month',
+                       sub_txt='')
     connectivity_receiver= pd.read_csv("AVG Connectivity of Receiver ID.csv")
     connectivity_sender= pd.read_csv("AVG Connectivity of Sender ID.csv")
     purity_receiver= pd.read_csv("AVG Purity of Receiver ID.csv")
