@@ -365,11 +365,22 @@ if menu_id== 'Connectivity and Purity':
         ),title= 'Average Purity of Sender ID')
     four.update_layout(yaxis_title= None)
 
-    col1, col2= st.columns([8,8])
+    col1, col2= st.columns(2)
     col1.plotly_chart(one, use_container_width= True)
     col2.plotly_chart(two, use_container_width= True)
+    with col1:
+        st.write('As shown in the network graph, receivers had a higher connectivity in the case of fraudulent transactions that was due to breaking up their transactions into many to avoid suspicions.')
+        st.write('')
+    with col2:
+        st.write('As shown in the network graph, senders had a higher connectivity in the case of fraudulent transactions that was due to breaking up their transactions into many to avoid suspicions.')
     col1.plotly_chart(three, use_container_width= True)
     col2.plotly_chart(four, use_container_width= True)
+    with col1:
+        st.write('As shown in the network graph, receivers had a higher purity in the case of non-fraudulent transactions compared to fraudulent.')
+    
+    with col2:    
+        st.write('As shown in the network graph, senders had a higher purity in the case of non-fraudulent transactions compared to fraudulent.')
+        
 ############################################################
 if menu_id== 'AML Tool':
     display_app_header(main_txt='Select Features and Get Transaction Status',
