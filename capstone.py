@@ -501,6 +501,6 @@ if menu_id== 'AML Tool':
             st.error('Suspicious Transaction')
         else:
             st.success('Safe Transaction')
-        st.text(f"The Output's Accuracy is: {acc}")
+
 
     
