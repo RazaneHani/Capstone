@@ -410,7 +410,7 @@ if menu_id== 'AML Tool':
         z=st.number_input('Sender ID', 0, 9999999)
         if z in list(sender['Sender ID']):
             a=st.write('Connectivity of this sender is: ', sender[sender['Sender ID']==z]['Connectivity of Sender ID'].values[0])
-            b=st.text('Purity of this sender is: ', sender[sender['Sender ID']==z]['Purity of Sender ID'].values[0])
+            b=st.write('Purity of this sender is: ', sender[sender['Sender ID']==z]['Purity of Sender ID'].values[0])
         else:
             st.write('Connectivity of this sender is: 0')
             st.write('Purity of this sender is: 100')
