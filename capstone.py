@@ -384,6 +384,13 @@ if menu_id== 'Connectivity and Purity':
         
 ############################################################
 if menu_id== 'AML Tool':
+    dataset = st.file_uploader(label = '')
+    if dataset is None:
+        st.write('')
+    
+    use_defo = st.checkbox('Use example Dataset', value= True, key= '77')
+    if use_defo:
+        dataset = df1
     display_app_header(main_txt='Select Features and Get Transaction Status',
                        sub_txt='')
     sender= (
